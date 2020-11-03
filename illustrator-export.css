@@ -1,0 +1,171 @@
+cl-1 {
+  fill: none;
+}
+
+.cl-1,
+.cl-2,
+.cl-20,
+.cl-21,
+.cl-22,
+.cl-23,
+.cl-24,
+.cl-25 {
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+.cl-1,
+.cl-2,
+.cl-20,
+.cl-21,
+.cl-22,
+.cl-23,
+.cl-24,
+.cl-25 {
+  fill: #fff;
+}
+
+.special-logo-class {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+.cl-3 {
+  font-size: 28.4px;
+  font-family: Helvetica-Narrow, Helvetica Narrow;
+}
+
+.cl-4 {
+  font-size: 19.73px;
+}
+
+.cl-10,
+.cl-26,
+.cl-4 {
+  font-family: Eurostile-Reg, Eurostile;
+}
+
+.cl-5 {
+  letter-spacing: 0.04em;
+}
+
+.cl-6 {
+  letter-spacing: 0em;
+}
+
+.cl-7 {
+  letter-spacing: 0.01em;
+}
+
+.cl-8 {
+  font-size: 9.39px;
+}
+
+.cl-16,
+.cl-28,
+.cl-8 {
+  font-family: Eurostile-RegObl, Eurostile;
+  font-style: oblique;
+}
+
+.cl-9 {
+  letter-spacing: 0em;
+}
+
+.cl-10 {
+  font-size: 19.73px;
+}
+
+.cl-11 {
+  letter-spacing: 0em;
+}
+
+.cl-12 {
+  letter-spacing: 0.02em;
+}
+
+.cl-13 {
+  letter-spacing: 0.04em;
+}
+
+.cl-14 {
+  letter-spacing: 0em;
+}
+
+.cl-15 {
+  letter-spacing: 0.01em;
+}
+
+.cl-16 {
+  font-size: 9.39px;
+}
+
+.cl-17 {
+  letter-spacing: 0em;
+}
+
+.cl-18 {
+  letter-spacing: 0em;
+}
+
+.cl-19 {
+  letter-spacing: 0em;
+}
+
+.cl-20,
+.cl-21,
+.cl-22,
+.cl-23,
+.cl-24 {
+  stroke-width: 2px;
+}
+
+.cl-21 {
+  font-size: 34.15px;
+  letter-spacing: 0.06em;
+}
+
+.cl-21,
+.cl-22,
+.cl-23,
+.cl-24,
+.cl-25 {
+  font-family: Billo;
+}
+
+.cl-22 {
+  font-size: 68.35px;
+  letter-spacing: 0.06em;
+}
+
+.cl-23 {
+  font-size: 47.58px;
+  letter-spacing: 0.06em;
+}
+
+.cl-24 {
+  font-size: 39.78px;
+  letter-spacing: 0.06em;
+}
+
+.cl-25 {
+  font-size: 19.41px;
+  letter-spacing: 0.06em;
+}
+
+.cl-26 {
+  font-size: 23.3px;
+}
+
+.cl-27 {
+  letter-spacing: 0em;
+}
+
+.cl-28 {
+  font-size: 9.11px;
+}
+
+.cl-29 {
+  letter-spacing: 0em;
+}

@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Conv_Helvetica-Narrow_22496';
+	src: url('fonts/Helvetica-Narrow_22496.eot');
+	src: local('☺'), url('fonts/Helvetica-Narrow_22496.woff') format('woff'), url('fonts/Helvetica-Narrow_22496.ttf') format('truetype'), url('fonts/Helvetica-Narrow_22496.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.helvetica-narrow {
+  font-family: 'Conv_Helvetica-Narrow_22496';
+}
+
+/* the best the rotating animation isg oing to get...
+*some reason* the center is not === to the center thats in
+illustrator and im not sure why
+svgs .... :D */
+:root {
+  --x-value: 460.5px;
+  --y-value: 107.7px;
+  --bg-width: 100px;
+  --bg-height: 100px;
+}
+/* 461 107 is really close 
+474 109
+486 127 */
+#category-selector {
+  display: flex;
+}
+
+#nav-links a{
+  cursor: crosshair;
+}
+
+#instagram-icon {
+  stroke-width: 5px;
+}
+
+#linkdin-icon {
+  stroke-width: 5px;
+}
+
+#category-selector div{
+  margin-top: 3rem;
+}
+
+
+.cls-1 {
+  stroke: #000;
+  stroke-miterlimit: 10;
+  fill: #fff;
+} 
+
+#nav-main,
+#encapsulation,
+#nav-links {
+  /* min-width: 600px;
+  height: 100%; */
+  min-width: 30%;
+}
+
+#nav-main {
+  margin-left: 4rem;
+  margin-right: 7rem;
+  cursor: context-menu;
+}
+
+#encapsulation {
+  position: relative;
+}
+
+#encapsulated-text {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  top: -22%;
+  left: 25%;
+  transform: scaleX(1.9)
+}
+
+#encapsulated-text p{
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0;
+  font-family: eurostile;
+  /* font-size: 3.5rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#nav-links {
+  margin-right: 10rem;
+}
+
+#logo-top h1{
+  font-size: 3rem;
+  font-family: eurostile;
+  cursor: context-menu;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transform:translateY(15%);
+}
+
+#william-ptacek:hover {
+  border-bottom: 1px solid black;
+}
+
+#char-select-1-responsive {
+  display: none;
+}
+
+.rotateMedia {
+  transform: rotate(90deg) translateY(73%) scaleX(1.3) scaleY(1.9);
+  transform-origin: 50% 50%;
+}
+
+#char-select-1-icons {
+  transform: scale(0.63) translateY(45%) translateX(32%);
+}
+
+.linker {
+  cursor: pointer;
+}
+
+.logo-fill-ears {
+  fill: #a3da58 !important;
+}
+
+.logo-fill-face {
+  fill: #f7ba2b !important;
+}
+
+#underline {
+  opacity: 0;
+  transition: 0.1s all;
+}
+
+/* responsive stuff */
+/* #char-select-1-icons-responsive {
+  transform: scale(1.5);
+} */
+
+
+
+/* animations */
+@-webkit-keyframes rotating 
+/* taken from kirk strobeck on stackoverflow.com */
+{
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: var(--x-value) var(--y-value);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transform-origin: var(--x-value) var(--y-value);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: var(--x-value) var(--y-value);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transform-origin: var(--x-value) var(--y-value);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes blinking
+{
+  0%{opacity: 0}
+  100%{opacity: 100}
+}
+
+@keyframes blinking
+{
+  from{opacity: 100}
+  to{opacity: 0}
+}
+
+.blinking {
+  -webkit-animation: blinking 0.2s infinite;
+  -moz-animation: blinking infinite;
+  -ms-animation: blinking infinite;
+  -o-animation: blinking infinite;
+  animation: blinking 0.8s infinite;
+  animation-play-state: paused;
+}
+/* background-grid-scroll */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: var(--bg-width) var(--bg-height); }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: var(--bg-width) var(--bg-height); }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: var(--bg-width) var(--bg-height); }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: var(--bg-width) var(--bg-height); }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: var(--bg-width) var(--bg-height); }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: var(--bg-width) var(--bg-height); }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: var(--bg-width) var(--bg-height); }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: var(--bg-width) var(--bg-height); }
+}
+
+/* img size is 50x50 */
+/* top scrolling background */
+body::before{
+  content: '';
+  padding-top: 1px;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -100;
+  position: fixed;
+  opacity: 0.1;
+  /* impg size is 50x50 */
+  background: url(img/grid-2.png) repeat;
+  -webkit-animation: bg-scrolling-reverse 1.5s  infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 1.5s  infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 1.5s  infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 1.5s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+}
+
+
+/* tablet/small desktop */
+
+@media only screen and (max-width: 1549px) {
+  #logo-top {
+    display: none;
+  }
+
+  #nav-main,
+  #nav-links {
+    min-width: 40%;
+  }
+}
+
+/* phone */
+
+@media only screen and (max-width: 900px) {
+  #category-selector {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  #char-select-encapsulation-1 {
+    display: none;
+  }
+
+  #char-select-1-responsive {
+    display: block;
+  }
+
+  #char-select-1-responsive {
+    margin: auto;
+    min-width: 80%;
+  }
+
+  #nav-main,
+  #nav-links {
+    margin: auto;
+    margin-bottom: -1.5rem;
+    min-width: 80%;
+  }
+}
