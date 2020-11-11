@@ -159,7 +159,6 @@ svgs .... :D */
   position: relative;
   cursor: context-menu;
   transition: all 1s ease-in-out;
-  z-index: 1000;
 }
 
 .pop-up-category {
