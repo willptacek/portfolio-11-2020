@@ -124,7 +124,6 @@ svgs .... :D */
   border-bottom: 1px solid black;
 }
 
-
 #char-select-1-responsive {
   display: none;
 }
@@ -171,13 +170,6 @@ svgs .... :D */
 #mail-form {
   cursor: crosshair;
 }
-
-/* responsive stuff */
-/* #char-select-1-icons-responsive {
-  transform: scale(1.5);
-} */
-
-
 
 /* animations */
 @-webkit-keyframes rotating 
