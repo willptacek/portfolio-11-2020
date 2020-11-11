@@ -50,7 +50,7 @@ function removeClassFromElement(className, element) {
 
 function showPopUp() {
   blurElements();
-  popUp.style.display = "block";
+  // popUp.style.display = "block";
   for (let i = 0; i < everythingButPopUp.length; i++) {
     everythingButPopUp[i].addEventListener('click', closePopUp);
   }
