@@ -124,6 +124,7 @@ svgs .... :D */
   border-bottom: 1px solid black;
 }
 
+
 #char-select-1-responsive {
   display: none;
 }
@@ -152,6 +153,23 @@ svgs .... :D */
 #underline {
   opacity: 0;
   transition: 0.1s all;
+}
+
+#pop-up {
+  display: none;
+  position: relative;
+  cursor: context-menu;
+  transition: all 1s ease-in-out;
+  z-index: 1000;
+}
+
+.pop-up-category {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#mail-form {
+  cursor: crosshair;
 }
 
 /* responsive stuff */
@@ -254,7 +272,7 @@ svgs .... :D */
 
 /* img size is 50x50 */
 /* top scrolling background */
-body::before{
+#bg-div{
   content: '';
   padding-top: 1px;
   min-height: 100%;
@@ -272,6 +290,7 @@ body::before{
   -moz-animation-timing-function:    linear;
   -o-animation-timing-function:      linear;
   animation-timing-function:         linear;
+  transition: all 0.4s ease-in-out;
 }
 
 
