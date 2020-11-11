@@ -39,7 +39,7 @@ currentPortfolio.addEventListener('mouseout', function () {
   removeClassFromElement('logo-fill-face', logoFace);
 })
 
-currentPortfolio.addEventListener('click', showPopUp)
+
 
 function addClassToElement(className, element) {
   element.classList.add(className);
@@ -48,19 +48,11 @@ function removeClassFromElement(className, element) {
   element.classList.remove(className);
 }
 
-function showPopUp() {
-  blurElements();
-  // popUp.style.display = "block";
-  for (let i = 0; i < everythingButPopUp.length; i++) {
-    everythingButPopUp[i].addEventListener('click', closePopUp);
-  }
-  background.addEventListener('click', closePopUp);
-}
+// below - when you click on my information, popup shows
+// event listener
+currentPortfolio.addEventListener('click', showPopUp)
 
-function closePopUp() {
-  unBlurElements(); charSelectEncapsulation1.removeEventListener('click', closePopUp);
-  popUp.style.display = "none";
-}
+//blurs and unblurs all elements that arent the popup
 
 function blurElements() {
   for (let i = 0; i < everythingButPopUp.length; i++) {
@@ -76,3 +68,26 @@ function unBlurElements() {
   }
   background.style.filter = "none";
 }
+
+// function that calls blurElements, displays the popup, and adds the close popup event listener to other elements
+
+function showPopUp() {
+  blurElements();
+  popUp.style.display = "block";
+  setTimeout(function () { handleEventListeners() }, 10);
+}
+
+function closePopUp(e) {
+  unBlurElements(); charSelectEncapsulation1.removeEventListener('click', closePopUp);
+  popUp.style.display = "none";
+}
+
+function handleEventListeners() {
+  body.addEventListener('click', function (e) {
+    if (!(e.target.parentNode.classList.contains("dontClose"))) {
+      closePopUp();
+    }
+  })
+}
+
+
